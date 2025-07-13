@@ -11,6 +11,21 @@ basically in Dev we have to focus on
 
 
  -- github 
+ intialization --- git add . , git commit -m "...." , git branch -M main , remote setup , push 
+ then you have to push the changes--- git add ./file change , git commit -m "...." , git push 
+----- basic github 
+---- revert, cherry picking, head , hashcode , commit history, merge conflict, pull request, merge request ? -- we will do it later 
+
+---------------
 
 
- 
+
+
+
+
+
+
+
+
+
+
