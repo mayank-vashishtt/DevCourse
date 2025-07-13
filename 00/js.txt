@@ -40,3 +40,53 @@ jscore (nitro) , ultra fast
 ----------------
 
 
+
+
+QUESTIONS ---- 
+
+console.log(a)
+var a = 10 // 
+shubham -- 10 
+tridi -- ?? error ? konsa?  runtime error 
+
+
+console.log(a)
+let a = 10 
+shubham -- 10 
+tridi  --- undefined ? ? 
+
+
+console.log(a)
+const a = 10
+shubham -- undefined
+tridi --  undefined  \
+
+ 
+------- 
+HOISTING in JS 
+
+
+hoisting -- means that variable and functions declaration are moved to the top of their scope before the code runs 
+
+in js 2 things are hoisted ? 
+1. variables 
+2. functions 
+
+
+
+--- functions 
+are of 2 types -- nrmal and another one is arrow function 
+hoisting doesnt work on arrow function 
+hoisting works on nrmal function 
+and it will give the result too 
+
+
+-- variables 
+var -- it will always give undefined 
+
+because below variables come in TDZ --- temporal dead zone
+let -- ReferenceError
+const -- ReferenceError
+
+
+now we are done with hoisting
