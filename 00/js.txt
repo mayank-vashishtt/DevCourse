@@ -90,3 +90,55 @@ const -- ReferenceError
 
 
 now we are done with hoisting
+
+
+
+-----------------------
+
+
+console.log(typeof null)
+shubham -- null
+tridi --  object
+////// bug h js me starting se
+
+
+console.log([1,2] + 1)
+shubham --  1,2,1 
+tridi -- 
+
+this is from the topic type coercion
+
+
+
+----------------
+
+
+type coercion
+js automatically changes one type of data into another type to make the code work 
+
+
+console.log("5" + 1)
+
+
+2  types of type coercion
+
+implicict and explicit 
+implicict - js do it by itself   console.log(undefined + 1)
+explicit -- you force it      console.log(Boolean(1)) 
+
+
+
+
+-------------------------------------
+
+console.log([] + [])
+shubham -- null 
+tridi -- ?? null 
+
+
+console.log([] + {})
+shubham -- ""
+tridi -- "" 
+
+
+console.log({} + [])

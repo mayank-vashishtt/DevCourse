@@ -49,3 +49,34 @@
 
 
 
+// console.log(typeof null) // null is an object in js
+// console.log(typeof undefined) // undefined is a type in js
+
+
+// console.log([1,2] + 1)
+
+// "1,2" + 1 
+// "1,2" + "1"
+// "1,21" 
+
+
+
+
+// console.log(undefined + 1)
+
+
+
+// console.log([] + []) // ""
+
+
+// console.log([] + {}) // [object Object]
+
+// console.log({})
+
+
+
+// console.log({} + [])
+
+
+
+
