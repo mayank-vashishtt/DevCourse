@@ -1,0 +1,16 @@
+so we are getting start by DEV  -- right ? 
+
+
+basically in Dev we have to focus on 
+ -- css , js 
+ -- frontend 
+ -- backend 
+ -- tools 
+ -- devops 
+ -- adv dev 
+
+
+ -- github 
+
+
+ 
