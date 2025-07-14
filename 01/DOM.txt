@@ -1,0 +1,61 @@
+dom in js 
+
+that is document object model 
+its like a tree of HTML tags 
+basically structured representation kah skta h 
+
+why we are talking about dom ? 
+beacause it helps us to move around in the page. 
+
+
+
+DOM me important is Parent child siblings cousin property ? -- dom works on it. 
+
+query selectors and all ssb aate h --- 
+
+DOM comman commands. ---- 
+
+
+DOM is basically or mostly used in web scraping 
+
+
+1. document.getElementById(" ... ")
+finds one with same id 
+
+2. document.getElementsByClassName(".." )
+gives all elements that have the class that is mentioned 
+
+3. document.getElementByTagName("p")
+gets all that tags mention in the code for eg if we use p 
+then give all p tags in the document
+
+4. document.querySelector("...")
+gets the first match using css selectors
+
+
+5. document.querySelectorAll();
+returns a NODELIST of all matching elements 
+
+ ---------------
+
+
+
+ 6. title.innerText; 
+
+ 7. title.innerHTML;
+
+
+-----------------------------
+
+
+
+
+
+
+
+
+Q. find the diff between innerHTML and innerText? 
+
+
+
+
