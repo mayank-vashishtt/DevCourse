@@ -1,0 +1,86 @@
+DataBases 
+
+digital storage for ofc web apps, website , apps 
+it stores informationin way that is 
+easy to  /// add, search, update, and delete  /// 
+
+
+-----------------------
+
+common databases operations 
+CRUD opearations 
+
+Create 
+Read 
+Update 
+Delete
+
+--------------------------
+
+databases are of 2 types 
+SQL and NoSQL 
+
+-------------------------
+
+what is SQL db? 
+
+it is stuctured query language 
+relational db -- that is organised in tables and rows 
+sql --- postgress, mysql, oracle
+-------------------------------
+
+what is noSQL db ? 
+it means not only SQL 
+these db dont use tables. 
+they use flexible formats like documents, key value pair, graphs , columns 
+most popular type -- document base
+
+goodies --- 
+no strict schema 
+horizontal scaling is very easy 
+
+nosql -- mondodb, firebase, redis, neo4j
+
+
+---------------------------------------------
+
+
+sql vs nosql 
+
+struture 
+sql have tables rows colums 
+nosql have documents , key value, graphs, etc 
+
+schema 
+sql have fixed schema 
+nosql have it flexible 
+
+relationships 
+sql have strong bonds(foreign keys, joins)
+nosql have weak or manual bonds 
+
+language 
+sql have SQL 
+nosql  custom api/ queries 
+
+scaling 
+sql vertical scaling easy bigger server 
+nosql have horizontal scaling easily more servers
+
+
+use case 
+sql -- banking e com , structed data 
+nosql --socials, IoT, fast apps 
+
+speed
+sql is slower for massive data 
+nosql have faster for massive data
+
+
+------------------------
+crux -- conlcusion 
+sql -- strong data modeling 
+nosql -- speed and flexibilty 
+
+
+
