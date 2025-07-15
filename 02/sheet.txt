@@ -160,3 +160,108 @@ console.log("cookies left: " + cookies);
 -----------------------------
 
 
+
+function m(x){
+
+    return function(y=4){
+        return x + y;
+    }
+
+
+}
+
+const double =m(2)(19)
+console.log(double(1));
+
+//TypeError: double is not a function
+
+
+--------------------------------
+
+
+function greet(name,cb = function() {
+    console.log("Default callback executed.");
+})     {
+    console.log("Hello " + name);
+    cb();
+    let a = cb(); 
+    console.log("Callback returned: " + a);
+}
+
+greet("Alice", function() {
+
+
+    console.log("Callback executed after greeting.");
+
+
+
+    return "aaa"
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+    console.log(" after returnCallback executed after greeting.");
+
+});
+---------------------------------
+
+
+IIFE 
+
+immedieately invoked function expression 
+
+you write a function and run it immedieately without calling it later 
+
+
+usefulness? 
+creates pvt variable -- anything inside stay hidden 
+avoid pollution in global scope 
+
+
+(function(){
+....
+})()
+
+OR 
+
+(() => {
+.....
+})();
+
+
+
+
+let secret_information = (function(){
+
+    let user = 'jha';
+    console.log("user is " + user);
+    
+    return("jha is gay");
+    
+    
+})()
+
+
+console.log("jha ka sach neche hai");
+console.log(secret_information);
+
+
+
+------------------
+ECMAScript 
+
+what is this ? 
+it is the offical standard for js 
+
+
+history 
+1995 js was born 
+
+Netscape  --- big rule in js 
+
+1997 ECMAScript 1 
+------------------------------
+
