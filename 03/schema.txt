@@ -1,0 +1,28 @@
+let work on schema rn 
+
+we are making attendace app right ?
+condition -- teacher can only mark attendance 
+right ? 
+
+
+
+teacher, student, attendace 
+
+
+
+teacher 
+/// mongo db themselves create the id, you dont need to mention it explicitly
+name 
+
+
+
+student 
+name
+
+attendance
+studentid 
+teacherid 
+date 
+status  --- present ya absent 
+
+
