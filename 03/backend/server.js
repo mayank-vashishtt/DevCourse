@@ -1,26 +1,19 @@
 const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config();
 const cors = require("cors");
+
 const connectDB = require("./config/db");
 
-const studentRoutes = require("./routes/studentRoutes");
-const teacherRoutes = require("./routes/teacherRoutes");
-const attendanceRoutes = require("./routes/attendanceRoutes");
+// Connect to MongoDB
+connectDB().catch((err) => console.error("Failed to connect to MongoDB:", err));
 
-dotenv.config();
-
-// Debug database connection
-const mongoose = require("mongoose");
-mongoose.connection.on("error", (err) => {
-  console.error("MongoDB connection error:", err);
-});
-
-connectDB();
+// Wrap async route handlers to catch errors
 
 const app = express();
 
-// Middleware
-// Configure CORS with specific options
+// Basic middlewares
+app.use(express.json());
 app.use(
   cors({
     origin: "*", // Allow all origins
@@ -29,41 +22,20 @@ app.use(
   })
 );
 
-app.use(express.json());
+// Test route - placing it before other middleware
 
-// Add detailed request logging
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
+const studentRoutes = require("./routes/studentRoutes");
+const teacherRoutes = require("./routes/teacherRoutes");
+const attendanceRoutes = require("./routes/attendanceRoutes");
 
-// Check MongoDB connection before proceeding
-app.use((req, res, next) => {
-  if (mongoose.connection.readyState !== 1) {
-    return res.status(503).json({ error: "Database connection not ready" });
-  }
-  next();
-});
-
-console.log("CORS enabled for all origins");
-
-// Test route
-app.get("/test", (req, res) => {
-  res.json({ message: "Server is working properly" });
-});
-
-// Routes
+// API Routes
 app.use("/api/students", studentRoutes);
 app.use("/api/teachers", teacherRoutes);
 app.use("/api/attendance", attendanceRoutes);
 
-// Error handling
-app.use((err, req, res, next) => {
-  console.error("Error:", err);
-  res.status(500).json({ error: err.message });
-});
+const PORT = process.env.PORT || 3000;
 
-const PORT = process.env.PORT || 5000;
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
