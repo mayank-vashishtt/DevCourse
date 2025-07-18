@@ -38,3 +38,47 @@ server-sent events (debatable)  -- explain why debatable
 websocket(debatable)  -- explain why debatable
 
 
+
+
+websocket 
+it is rearely used to backend server to talk to each other 
+it is mostly used to browser to talk to the server 
+
+WebSockets provide a way to establish a persistent, full-duplex communication 
+channel over a single TCP connection between the client (typically a web browser) 
+and the server.
+
+in http you dont create a persistent connection 
+you sen req and wait for response, as respons come you close the connection 
+
+
+what is handshake in http ? 3 way handshake ? 
+in websocket handshake happen only once 
+
+both side can send req in web socket 
+you cant do this in http 
+
+practical use case of web socket ?
+real time application
+live feeds
+interactive feeds
+
+
+Real-Time Applications: Chat applications, live sports updates, 
+real-time gaming, and any application requiring instant updates 
+can benefit from WebSockets.
+
+Live Feeds: Financial tickers, news feeds, 
+and social media updates are examples where WebSockets 
+can be used to push live data to users.
+
+
+Interactive Services: Collaborative editing tools, 
+live customer support chat, and interactive webinars can use 
+WebSockets to enhance user interaction
+
+
+what is tcp connection ? 
+
+what polling leetcode does ? i mean sending http req again and again 
+
