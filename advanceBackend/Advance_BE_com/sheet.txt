@@ -1,0 +1,40 @@
+advanced backend communication 
+
+url -- https://projects.100xdevs.com/tracks/ABEC/ABEC-1
+
+backend system talk to other backend system using HTTP 
+
+
+why we don't create everything in single backend server?
+as your application grows you don't want to put everything in a single backend server 
+and async process like notification on phone 
+primary backend server be worry about it 
+
+
+what are microservices. ? 
+
+how do backends talk ? 
+http 
+queue
+web socket 
+pub sub 
+
+when these 4 use case and when they make sense and what are their cons ? 
+
+example of queue in paytm(their notification) and leetcode(their submission)
+
+
+types of communication 
+Synchronous  -- strong coupling 
+HTTP(REST/GraphQL) , what is GraphQL
+websocket(debatable) -- explain why debatable
+
+
+when you are waiting for a response from the another sever --> Synchronous
+Asynchronous  -- weak coupling 
+messaging queues
+pub subs 
+server-sent events (debatable)  -- explain why debatable
+websocket(debatable)  -- explain why debatable
+
+
