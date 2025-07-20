@@ -82,3 +82,14 @@ what is tcp connection ?
 
 what polling leetcode does ? i mean sending http req again and again 
 
+
+
+
+websocket in nodejs ? 
+there are many implemenation of websocket in nodejs 
+if you wanna create http server in nodejs you can use express, koa, hono(http framwork)
+above example are implemenation of http protocol 
+
+a lot of time company who care about latency server, 
+they build websocket server from sratch in some low level languge 
+
