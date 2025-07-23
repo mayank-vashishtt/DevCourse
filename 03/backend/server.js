@@ -27,11 +27,13 @@ app.use(
 const studentRoutes = require("./routes/studentRoutes");
 const teacherRoutes = require("./routes/teacherRoutes");
 const attendanceRoutes = require("./routes/attendanceRoutes");
+const holidayRoutes = require("./routes/holidayRoutes");
 
 // API Routes
 app.use("/api/students", studentRoutes);
 app.use("/api/teachers", teacherRoutes);
 app.use("/api/attendance", attendanceRoutes);
+app.use("/api/holidays", holidayRoutes);
 
 const PORT = process.env.PORT || 3000;
 
