@@ -1,0 +1,101 @@
+Authentication 
+
+what is Authentication? 
+any idea ?
+ 
+q --- what is diff between Authentication and authorization ? 
+ans -- Authentication verifies who someone is, 
+while authorization determines what they are allowed 
+to do after authentication is successful
+
+
+
+the process of letting users sign in/sign out of your website
+making sure routes are protected and users can only get back their own 
+data and not the data from a diff user 
+
+key topics :::::: 
+
+auth 
+jwt 
+authorization header 
+auth middleware 
+localstorage 
+
+----------------------------------------------------
+how does the auth workflow works ? 
+
+
+signin page.                  BE 
+
+
+
+dashboard.                    BE 
+
+
+signin page pr jaate h 
+uthhr username password bnate h , login bhi hojate h
+fir vo BE ko jata h 
+fir BE token deta h
+
+
+fir hum dashboard ki taraf jate h 
+uthr jate he api calling start hojati h 
+aur api calling me token sath me jata h 
+aur us token ki vajah se /courses vhi dekhte h , naki hr kesi ke 
+
+
+---------------------------------------------------------
+the user come to your website 
+the user sends request to /signin with their usernamee and password 
+username -- jha 
+pasword -- @RoyalBihari -- this pass will be hashed 
+it will be hashed password 
+
+it sends to the server
+server gives you token 
+
+then in every subsequent request, user sends the token to identify itself 
+to the BE/server
+
+
+Token -- secret that server gives you 
+aur tum server ko vo secret vapas bhjte ho in every request 
+so that server ko pta lge tum KON ho 
+
+
+--------------------------------------------------------------------
+
+
+
+kl code krege 
+then there will be assignment joki tumhe krni h to kro vrna chdo 
+todo list with authentication -- assignment 
+
+
+
+prerequiste ---- 
+
+middleware ..
+controllers ..
+mongoose ..
+express ..
+cors ..
+postman ...
+mongodb compass ..
+hashing --- ? , code  ek baar dekh liyo -- bcrypt library 
+params
+schema ? -- indexing , foreign key, composite key, primary key, enums, super key
+how to use constant file
+then SQL commands, basic ccommands 
+select, join , on, like , where , having, count, * , distinct
+
+
+
+
+
+
+
+
+
+
