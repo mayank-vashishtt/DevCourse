@@ -19,6 +19,7 @@ queue
 web socket 
 pub sub 
 
+
 when these 4 use case and when they make sense and what are their cons ? 
 
 example of queue in paytm(their notification) and leetcode(their submission)
@@ -93,3 +94,27 @@ above example are implemenation of http protocol
 a lot of time company who care about latency server, 
 they build websocket server from sratch in some low level languge 
 
+
+socket io is not that better 
+strict to core ws protocol
+
+
+more backend protocol 
+webRTC 
+quic
+
+
+polling and long polling diff?
+http pipeline 
+
+whenever you are creating webserver you are making http server only 
+
+ws code by http 
+ws code by express 
+
+
+
+ws uses call backs 
+
+
+hoppscotch.io -- like a postman for ws 

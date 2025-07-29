@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Register from "./components/Register";
-import Login from "./components/Login";
-import Chat from "./components/Chat";
+import Register from "./components/Register.jsx";
+import Login from "./components/Login.jsx";
+import Chat from "./components/Chat.jsx";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -12,13 +12,22 @@ function App() {
     return (
       <div>
         {showRegister ? (
-          <Register onRegister={data => { setUser(data.user); setToken(data.token); }} />
+          <Register
+            onRegister={(data) => {
+              setUser(data.user);
+              setToken(data.token);
+            }}
+            onShowLogin={() => setShowRegister(false)}
+          />
         ) : (
-          <Login onLogin={data => { setUser(data.user); setToken(data.token); }} />
+          <Login
+            onLogin={(data) => {
+              setUser(data.user);
+              setToken(data.token);
+            }}
+            onShowRegister={() => setShowRegister(true)}
+          />
         )}
-        <button onClick={() => setShowRegister(!showRegister)}>
-          {showRegister ? "Go to Login" : "Go to Register"}
-        </button>
       </div>
     );
   }
