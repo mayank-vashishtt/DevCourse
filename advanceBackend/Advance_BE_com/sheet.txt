@@ -130,3 +130,17 @@ with use state and use effect
 why web scoket no need to import ? 
 
 
+
+
+
+why use use client with ws un next js, its for backend too na 
+explain me with code this piece of code 
+
+
+scaling of ws servers ?
+and for http server vs ws server scaling 
+explain properly ? 
+and how much user one supports for http and ws too 
+and wht can problem come in ws server scaling , if fend are connected on diff ws server? 
+horizontal scaling , sharding , vertical scaling explain all the terms ?
+what are sticky connection ?
