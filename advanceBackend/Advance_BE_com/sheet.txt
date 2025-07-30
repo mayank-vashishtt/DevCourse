@@ -144,3 +144,12 @@ and how much user one supports for http and ws too
 and wht can problem come in ws server scaling , if fend are connected on diff ws server? 
 horizontal scaling , sharding , vertical scaling explain all the terms ?
 what are sticky connection ?
+
+
+
+
+web server vs web rtc 
+tcp vs udp 
+
+
+how multiplayer game works , tell in detail 
