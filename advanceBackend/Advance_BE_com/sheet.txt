@@ -153,3 +153,18 @@ tcp vs udp
 
 
 how multiplayer game works , tell in detail 
+
+
+
+https://projects.100xdevs.com/tracks/Redis/Redis1 
+link for redis 
+
+what is redis explain in detail and with example in elemetary english 
+primary backend ? 
+queue , pub sub implemenation and practical method 
+what is workers in queue ?
+
+
+why worker cant send directly to websocket? why need pub sub
+
+why  from browser to backend to queue to worker to pub sub to ws to browser ? 

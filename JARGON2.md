@@ -60,7 +60,7 @@
 
 * **Cheating risk** (players could manipulate state).
 * **NAT/firewall issues** (P2P connectivity fails without TURN relay).
-* **Server authoritative model ensures fairness** and consistent game state.
+* ** Server authoritative model ensures fairness** and consistent game state.
 
 ---
 
