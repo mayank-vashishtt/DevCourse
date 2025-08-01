@@ -168,3 +168,47 @@ what is workers in queue ?
 why worker cant send directly to websocket? why need pub sub
 
 why  from browser to backend to queue to worker to pub sub to ws to browser ? 
+
+
+what is nginx 
+what it does? 
+
+what is nginx.conf
+what is reverse proxy and proxy server? and it use in nginx
+is it work as load balancer , and what is laod balancer ?
+
+
+and what is apache 
+how nginx is diff from apache 
+
+server {
+    listen 443 ssl;
+    server_name api.globio.ai; # Replace with your domain or IP
+
+    ssl_certificate /etc/nginx/ssl/certificate.crt;
+    ssl_certificate_key /etc/nginx/ssl/private.key;
+
+    # Recommended SSL security settings
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location / {
+        proxy_pass http://backend:3000; # Use Docker Compose service name & port
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+explain this nginx.conf , i dont undersatnd a single word here 
+
+what is caching 
+and how it work in nginx and why need it 
+
+SSL termination , what is this ? 
+and how it work in nginx and why need it 
+and what it TSL 
+
+
+and compression in nginx ?
