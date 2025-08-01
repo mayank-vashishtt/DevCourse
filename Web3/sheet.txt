@@ -42,4 +42,4 @@ for eth -- solidity
 what is role of rust in web3 ? 
 
 
-
+basic of language 
