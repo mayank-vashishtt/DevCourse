@@ -21,9 +21,9 @@ module.exports = function(io) {
     });
 
     // Global chat message
-    socket.on('global-message', async ({ senderId, content, room }) => {
+    socket.on('global-message', async ({ senderId,senderName, content, room }) => {
       if (!room) room = "Lounge";
-      const msg = await Message.create({ senderId, content, room });
+      const msg = await Message.create({ senderId,senderName, content, room });
       io.to(room).emit('global-message', msg);
     });
 
