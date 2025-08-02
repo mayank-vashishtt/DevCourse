@@ -10,7 +10,7 @@ export default function Login({ onLogin, onShowRegister }) {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/login", {
+      const res = await axios.post("http://localhost:3001/api/login", {
         username,
         password,
         referralCode,
@@ -22,8 +22,8 @@ export default function Login({ onLogin, onShowRegister }) {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 px-4">
-      <div className="w-full max-w-md mx-auto">
+    <div className="flex justify-center items-center w-screen h-screen bg-gradient-to-br from-blue-50 to-purple-100">
+      <div className="w-full max-w-md">
         <form
           onSubmit={handleLogin}
           className="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-2xl flex flex-col gap-6 border border-gray-100"

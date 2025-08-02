@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Register({ onRegister }) {
+export default function Register({ onRegister, onShowLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [referralCode, setReferralCode] = useState("");
@@ -10,7 +10,7 @@ export default function Register({ onRegister }) {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/register", {
+      const res = await axios.post("http://localhost:3001/api/register", {
         username,
         password,
         referralCode,
@@ -22,7 +22,7 @@ export default function Register({ onRegister }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-100 to-blue-100">
+    <div className="flex justify-center items-center w-screen h-screen bg-gradient-to-br from-green-100 to-blue-100">
       <form
         onSubmit={handleRegister}
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm flex flex-col gap-4"
@@ -59,6 +59,13 @@ export default function Register({ onRegister }) {
           Register
         </button>
         {error && <div className="text-red-500 text-center">{error}</div>}
+        <button
+          type="button"
+          onClick={onShowLogin}
+          className="mt-2 text-blue-600 hover:underline font-semibold"
+        >
+          Go to Login
+        </button>
       </form>
     </div>
   );

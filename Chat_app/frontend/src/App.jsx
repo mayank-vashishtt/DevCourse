@@ -1,38 +1,48 @@
 import React, { useState } from "react";
-import Register from "./components/Register.jsx";
-import Login from "./components/Login.jsx";
-import Chat from "./components/Chat.jsx";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Chat from "./components/Chat";
 
-function App() {
+export default function App() {
+  const [screen, setScreen] = useState("login");
   const [user, setUser] = useState(null);
   const [token, setToken] = useState("");
-  const [showRegister, setShowRegister] = useState(false);
 
-  if (!token) {
-    return (
-      <div>
-        {showRegister ? (
-          <Register
-            onRegister={(data) => {
-              setUser(data.user);
-              setToken(data.token);
-            }}
-            onShowLogin={() => setShowRegister(false)}
-          />
-        ) : (
-          <Login
-            onLogin={(data) => {
-              setUser(data.user);
-              setToken(data.token);
-            }}
-            onShowRegister={() => setShowRegister(true)}
-          />
-        )}
-      </div>
-    );
-  }
+  const handleLogin = (data) => {
+    setUser(data.user);
+    setToken(data.token);
+    setScreen("chat");
+  };
 
-  return <Chat user={user} token={token} />;
+  const handleRegister = (data) => {
+    setUser(data.user);
+    setToken(data.token);
+    setScreen("chat");
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setToken("");
+    setScreen("login");
+  };
+
+  return (
+    <>
+      {screen === "login" && (
+        <Login
+          onLogin={handleLogin}
+          onShowRegister={() => setScreen("register")}
+        />
+      )}
+      {screen === "register" && (
+        <Register
+          onRegister={handleRegister}
+          onShowLogin={() => setScreen("login")}
+        />
+      )}
+     {screen === "chat" && (
+        <Chat user={user} token={token} onLogout={handleLogout} />
+      )}
+    </>
+  );
 }
-
-export default App;
