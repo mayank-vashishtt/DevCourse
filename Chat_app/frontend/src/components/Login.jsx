@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import loginImage from "./login.png";
 
-export default function Login({ onLogin, onShowRegister }) {
+export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [referralCode, setReferralCode] = useState("");
@@ -22,61 +23,49 @@ export default function Login({ onLogin, onShowRegister }) {
   };
 
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-gradient-to-br from-blue-50 to-purple-100">
-      <div className="w-full max-w-md">
+    <div
+      className="flex w-screen h-screen bg-cover bg-center font-poppins"
+      style={{
+        backgroundImage: `url(${loginImage})`,
+      }}
+    >
+      <div className="flex-1"></div>
+      <div className="flex flex-col justify-center items-start w-2/5 h-full px-16">
         <form
           onSubmit={handleLogin}
-          className="bg-white/90 backdrop-blur-lg p-8 rounded-2xl shadow-2xl flex flex-col gap-6 border border-gray-100"
+          className="flex flex-col gap-6 text-white w-full max-w-md"
         >
-          <h2 className="text-4xl font-bold text-center mb-4 text-blue-700 tracking-tight">
-            Login
-          </h2>
-          <div className="flex flex-col gap-4">
-            <input
-              className="border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700 placeholder-gray-400 text-lg transition"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-            <input
-              type="password"
-              className="border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700 placeholder-gray-400 text-lg transition"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <input
-              className="border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700 placeholder-gray-400 text-lg transition"
-              placeholder="Referral Code"
-              value={referralCode}
-              onChange={(e) => setReferralCode(e.target.value)}
-              required
-            />
-          </div>
+          <h2 className="text-3xl font-bold mb-6">Login</h2>
+          <input
+            className="border-b border-gray-500 bg-transparent text-lg px-2 py-1 focus:outline-none focus:border-blue-500"
+            placeholder="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            className="border-b border-gray-500 bg-transparent text-lg px-2 py-1 focus:outline-none focus:border-blue-500"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <input
+            className="border-b border-gray-500 bg-transparent text-lg px-2 py-1 focus:outline-none focus:border-blue-500"
+            placeholder="Referral Code"
+            value={referralCode}
+            onChange={(e) => setReferralCode(e.target.value)}
+            required
+          />
           <button
             type="submit"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition duration-200 shadow-lg text-lg mt-2"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-lg transition duration-200"
           >
             Login
           </button>
-          {error && (
-            <div className="text-red-500 text-center text-base mt-2">
-              {error}
-            </div>
-          )}
+          {error && <div className="text-red-500 text-center">{error}</div>}
         </form>
-        <div className="text-center mt-4">
-          <span className="text-gray-500">Don't have an account?</span>
-          <button
-            type="button"
-            onClick={onShowRegister}
-            className="ml-2 text-blue-600 hover:underline font-semibold"
-          >
-            Register
-          </button>
-        </div>
       </div>
     </div>
   );

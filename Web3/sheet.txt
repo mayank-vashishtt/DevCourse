@@ -42,4 +42,8 @@ for eth -- solidity
 what is role of rust in web3 ? 
 
 
-basic of language 
+basic of language solidity -- cryptozombines.io 
+
+
+contracts -- are like classes in java in eth 
+
