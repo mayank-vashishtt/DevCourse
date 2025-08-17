@@ -1,0 +1,38 @@
+Port mapping
+The command 
+docker run -d -p 27018:27017 mongo 
+is used to run a MongoDB container and map the container's port to a different port 
+on the host machine. Let's break down the different parts of this command:
+
+docker run: This command is used to create and start a new container from a Docker image.
+
+d: This flag runs the container in detached mode, which means it runs in the background and doesn't block the terminal.
+
+p 27018:27017: This flag is used for port mapping. It maps the container's port 27017 (the default port for MongoDB) to the host's port 27018. This means that you can access the MongoDB instance running inside the container from the host machine using the port 27018.
+The syntax for port mapping is -p <host_port>:<container_port>. In this case, 27018 is the host port, and 27017 is the container port.
+
+mongo: This is the name of the Docker image from which the container will be created. In this case, it's the official MongoDB image from Docker Hub.
+
+
+Common docker commands
+
+docker images
+docker ps
+docker run
+e or -env: Sets an environment variable in the container.
+docker push
+docker kill
+docker exec
+
+
+
+When you run the commands docker run -d -p 27018:27017 mongo 
+and docker run -d -p 27019:27017 mongo, 
+you are creating two separate MongoDB containers from the same image. 
+Although both containers use the same internal MongoDB port (27017), 
+each one is mapped to a different port on the host machine (27018 and 27019). 
+This means that each container runs its own isolated instance of MongoDB, 
+and they do not share data or resources by default. 
+You can access each MongoDB instance independently using its respective host port, 
+and any data stored in one container will not be available in the other 
+unless you explicitly configure shared storage.
