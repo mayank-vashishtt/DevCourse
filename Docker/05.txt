@@ -1,0 +1,86 @@
+Dockerfile
+
+What is a Dockerfile?
+
+A Dockerfile is a text document that contains a set of instructions for building a Docker image. 
+It specifies the base image to start from and the steps required to create the desired environment for your application, 
+such as installing dependencies, copying files, and setting environment variables.
+
+
+
+How to Write a Dockerfile
+
+A Dockerfile typically consists of two main parts:
+
+Base Image: The first line in a Dockerfile specifies the base image to start from. This can be an official image from Docker Hub or a custom image you've built previously.
+Commands: The rest of the Dockerfile contains a series of commands that are executed on top of the base image to create the desired environment for your application.
+
+here are some common commands used in Dockerfiles:
+WORKDIR: Sets the working directory for any subsequent instructions (RUN, CMD, ENTRYPOINT, COPY).
+RUN: Executes a command in a new layer on top of the current image and commits the results.
+CMD: Provides the default command to run when a container is started from the image.
+EXPOSE: Informs Docker that the container listens on the specified network ports at runtime.
+ENV: Sets an environment variable.
+COPY: Copies files from the Docker host to the Docker image.
+ 
+
+# Use the official Node.js image as the base
+FROM node:18
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Start the application
+CMD ["npm", "start"]
+
+
+
+Here's what each instruction does:
+FROM node:18: Specifies the base image as the official Node.js 18 image from Docker Hub.
+WORKDIR /app: Sets the working directory to /app inside the container.
+COPY package*.json ./: Copies the package.json and package-lock.json files to the working directory.
+RUN npm install: Installs the application's dependencies.
+COPY . .: Copies the rest of the application code to the working directory.
+EXPOSE 3000: Informs Docker that the container listens on port 3000 at runtime.
+CMD ["npm", "start"]: Sets the default command to run when the container starts, which is npm start in this case.
+
+
+Building and Running the Docker Image
+
+To build the Docker image from the Dockerfile, navigate to the directory containing the Dockerfile and run the following command:
+docker build -t my-backend-app .
+this command builds the Docker image and tags it with the name my-backend-app.
+
+Once the image is built, you can run a container from it using the following command:
+docker run -p 3000:3000 my-backend-app
+This command runs a container from the my-backend-app image and maps the container's port 3000 to the host's port 3000 using the -p flag.
+
+
+Passing in env variables
+Docker allows you to set environment variables when running a container 
+using the -e or --env flag. This is particularly useful when you need to provide 
+configuration values or sensitive data (like database connection strings) to your 
+application without hardcoding them in your codebase
+
+docker run -p 3000:3000 -e DATABASE_URL="postgres://avnadmin:AVNS_EeDiMIdW-dNT4Ox9l1n@pg-35339ab4-harkirat-d1b9.a.aivencloud.com:25579/defaultdb?sslmode=require" my-image-name
+
+To access environment variables in a Node.js application, you can use the process.env object. For example:
+const databaseUrl = process.env.DATABASE_URL;
+// Use the databaseUrl variable to connect to the database
+
+By passing environment variables to Docker containers, 
+you can separate configuration values from your application code,
+ making it easier to manage and deploy your application in different environments (e.g., development, staging, production) 
+ without modifying the codebase.
