@@ -1,0 +1,35 @@
+link -- https://projects.100xdevs.com/tracks/docker-easy/docker-1
+
+
+
+wht is containerization ? 
+wht is container  ? 
+
+why container is useful ? 
+
+
+why need docker?  
+
+give me docker commands?  
+
+what is the flow of docker when runnign locally ? 
+
+docker engine ? 
+docker registry? 
+what is docker CLI ?
+
+
+what is image vs container ? in docker 
+
+
+what is daemon is docker? 
+
+how to create a image and push to dockerhub ? 
+start container how locally using other people images or mine how to do it ? 
+how to deploy to aws machine using docker/kubernetes?
+
+
+how to port mapping?
+
+
+ 
