@@ -32,4 +32,48 @@ how to deploy to aws machine using docker/kubernetes?
 how to port mapping?
 
 
+docker run mongo 
+docker pull mongo 
+docker images
+docker ps 
+-d 
+2710:2710
+docker kill <container_id> 
+how to delete image ?  -- docker rmi <image_name> 
+docker build 
+docker exec 
+
+
+
+explain each command listed above 
+
+
+
+
+what is dockerfile 
+how to write dockerfile
  
+
+
+dockerfile has 2 parts 
+
+diff between virtual machine and container 
+
+how CMD is diff from other in dockerfile. ? 
+
+
+docker build -t <name> . 
+what this command does ? 
+
+
+how to create image locally ? 
+and how to run it ? 
+
+
+what .dockerignore does ?
+
+
+how can i pass .env in docker production ways to do it ?
+
+
+what does docker.compose,yml does ?
