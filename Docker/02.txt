@@ -1,0 +1,62 @@
+history of docker? 
+Docker was founded in 2008 as a platform-as-a-service (PaaS) company called dotCloud 
+by Solomon Hykes, Kamel Founadi, and Sebastien Pahl in Paris, France. 
+The company later incorporated in the United States in 2010 and 
+participated in the Y Combinator accelerator program during the summer batch of 2010.
+
+Initially, dotCloud focused on providing a PaaS solution for developers to 
+build and deploy applications. However, during the development process, 
+the team realized the potential of the underlying container technology they were using, 
+which later became known as Docker.
+ 
+
+Installing Docker
+
+docker version: Displays the version of Docker installed on your system.
+
+docker run hello-world: Runs the hello-world Docker image, which is a simple container that prints a message and exits.
+
+docker pull <image>: Pulls (downloads) a Docker image from a registry (e.g., docker pull nginx).
+
+docker images: Lists the Docker images available on your local system.
+
+docker ps: Lists the currently running Docker containers.
+
+
+Docker Engine:
+The Docker Engine is the core component of Docker, 
+responsible for creating and managing containers. 
+It is an open-source containerization technology that allows developers 
+to package applications into containers.
+
+Containers are standardized executable components that combine application 
+source code with the required operating system (OS) libraries and dependencies.
+This allows containers to run consistently across different environments, 
+ensuring portability and reproducibility.
+
+
+
+Docker CLI (Command Line Interface):
+The Docker CLI is a command-line interface that allows you to interact with 
+the Docker Engine. It provides a set of commands that enable you to 
+perform various operations, such as starting, stopping, listing, 
+and managing containers.
+
+Docker Registry:
+The Docker Registry is a service that stores and distributes Docker images. 
+It acts as a central repository where you can push and pull Docker images.
+
+Docker Hub (https://hub.docker.com/) is the main public Docker registry 
+maintained by Docker, Inc. It hosts a vast collection of Docker images contributed by the community and various organizations.
+
+For example, the official MongoDB image can be found on Docker Hub at https://hub.docker.com/_/mongo.
+
+In addition to Docker Hub, you can also set up private Docker registries within 
+your organization or use third-party registry services like 
+Amazon Elastic Container Registry (ECR), Google Container Registry (GCR), 
+or Azure Container Registry.
+
+
+The Docker Engine provides the core containerization functionality, 
+the Docker CLI allows you to interact with the Engine, and 
+the Docker Registry serves as a central repository for storing and distributing Docker images.
