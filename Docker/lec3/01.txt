@@ -1,0 +1,40 @@
+docker kill <container_id>
+Think of a container like a small computer program running inside a box.
+sometimes the program gets stuck or you want to stop it quickly.
+docker kill is like pulling the power cable from that box.
+The container stops immediately (without saving anything).
+
+docker ps               # shows running containers
+docker kill 123abc456   # stop container with id 123abc456
+
+Difference with docker stop
+stop → tells the program nicely “please shut down”.
+kill → cuts the power instantly.
+
+
+
+docker rmi <image_name>
+An image is like the blueprint or recipe for making containers.
+example: “Ubuntu 20.04 image” is a recipe for making Ubuntu containers.
+rmi = remove image from your computer.
+
+docker images           # see images
+docker rmi ubuntu:20.04
+if a container is still using that image, you cannot delete it until you remove the container.
+
+
+
+docker exec
+Once a container is running, you may want to go inside it.
+exec = execute a command inside the running container.
+Example: open a shell (like logging into a small computer):
+docker exec -it <container_id> /bin/bash
+
+-i = interactive (you can type).
+-t = gives you a terminal.
+/bin/bash = the shell inside Linux container.
+
+
+when done, type
+exit
+

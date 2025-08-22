@@ -1,0 +1,50 @@
+Pushing to Docker Hub
+
+Docker Hub = like GitHub but for container images.
+
+Every user has a username/namespace.
+You cannot push to the global namespace (like ubuntu or nginx) because those are official images maintained by Docker or organizations.
+So you need your username prefix.
+
+
+docker login
+docker tag myapp myusername/myapp:1.0
+docker push myusername/myapp:1.0
+
+
+Now others can download it using:
+docker pull myusername/myapp:1.0
+
+
+Why not global namespace?
+Because if anyone could push nginx, we wouldn’t know which is the real one. 
+It would be unsafe. That’s why each user gets their own “folder”.
+
+
+Docker Compose
+Running one container is easy. But real apps need many:
+Web server (Nginx)
+Database (MySQL)
+Backend service (Node.js, Python, etc.)
+
+Without Compose, you must start each one with long docker run commands.
+With Compose, you write a YAML file (docker-compose.yml) that describes all containers, networks, and volumes. Then run:
+
+
+docker compose up
+
+docker-compose.yml
+version: '3'
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+
+
+Now, with one command, both web and db start together.
+So Compose = project manager for multiple containers.

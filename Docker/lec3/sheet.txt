@@ -1,0 +1,25 @@
+docker kill <container_id>
+docker rmi <image_name> 
+
+
+docker exec 
+
+docker exec -it <container id> /bin/bash 
+exit 
+
+pushing to. dockerhub 
+why most users dont push to global namesapce, they need prefix or username?  
+
+
+
+docker compose ?
+explain in detail 
+
+
+
+bind mounts ?
+hot reloading ?
+use case of  bind mount now ? 
+
+how to mount bind ?
+ 

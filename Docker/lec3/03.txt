@@ -1,0 +1,33 @@
+Bind Mounts
+
+By default:
+Containers have their own filesystem inside.
+Files don’t change when you change them on your computer.
+
+Bind mount = link a folder from your computer into the container.
+So if you change a file on your computer, it instantly changes inside the container.
+
+Why useful?
+
+For development (hot reloading).
+Example: you are coding a Node.js app. Instead of rebuilding image every time, you mount your project folder. Changes reflect instantly.
+
+
+Hot Reloading
+Hot reload = app automatically reloads when files change.
+Example: you edit index.js, and the server reloads without restarting the container.
+Bind mount + dev tool (like nodemon) = hot reloading.
+
+So bind mount = bridge for files,
+hot reload = magic that refreshes app automatically.
+
+
+How to Mount Bind
+
+
+Syntax in docker run:
+docker run -v /path/on/host:/path/in/container image_name
+docker run -it -v $(pwd):/app node bash
+
+$(pwd) = current folder on your computer.
+/app = where it appears inside container.
