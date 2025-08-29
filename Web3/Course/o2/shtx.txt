@@ -1,0 +1,64 @@
+web based wallet? 
+ 
+
+wht is UTF-8  ? 
+
+
+hashing? 
+algo for hasing -- SHA256 and MD5
+
+ 
+symmmetric encryption -- same pvt key in encryption and decrytion 
+symetric algo -- AES
+
+asymetric encryption -- diff  key  {pvt and public }  -- ---- ---- used in cyrpto 
+
+asysmmetric encryption algorithm 
+RSA  -- rivest shamir adleman
+Ecc -- elliptic curve crptography (ECDSA) - -ETH and BTC
+EdSA - edwards curve digital singature algo -- SOL 
+
+
+
+
+these algo depend on elliptic curve 
+common elliptic curves?   
+secp256k1 -- BTC and ETH 
+ed25519 - SOL 
+
+they use these algo to generate public key and pvt key
+
+few use case 
+SSL/TLS certificate 
+SSH keys to connect to servers like github 
+blockchains and cryptocurrencies
+
+
+from the pvt key you can dervie the public key not vice versa
+
+
+read the notes they are too imp 
+https://projects.100xdevs.com/tracks/public-private-keys/Public-Key-Cryptography-1
+
+
+ 
+
+ HD wallets ?
+
+ BIP 32
+
+
+ crypto steel 
+
+
+ mnemonics 
+
+ derivation path 
+
+
+ BIP44
+
+
+ m/44/0/1 -> 2nd wallet on bitcoin 
+
+  

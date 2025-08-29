@@ -1,0 +1,63 @@
+in web3 bounty are a lot not jobs 
+
+why blockchain ? 
+
+inflating currencies ? 
+bailouts. ?
+
+even big banks go down 
+
+
+how inr going up against us dollar is bad ? 
+
+
+why japaense currency ? here in cyrpto ? 
+
+
+hashing function ? 
+same input will always produce the same output
+fast computation : the hash value can be quickly computed for any given data 
+pre image resistance: computation infeasible 
+small change in input do large change in output 
+
+
+may be 2 input can raise to same output but thats have low lowest probability
+
+
+hashing vs encryption difference ?
+
+
+SHA - 256
+its hashing algo 
+
+
+const crypto = require('crypto');
+
+const input = "111maa"
+const hash = cyrpto.createHash('sha256').update(input).digest('hex');
+
+console.log(hash)
+
+
+sha 256. -- 2^256
+have 256 bits 
+why converted to 64 bits? as 1 byte. === 8 bits 
+
+
+binary conversion or vice versa 
+
+convert 16 into binary 
+
+
+
+596138 -- gives 5 0s in starting
+
+proof of work ? in btc? 
+
+
+what is apache 
+
+what is pm2? 
+blue green deployment ?
+
+

@@ -1,0 +1,179 @@
+domains 
+IP 
+
+
+ping localhost
+ 
+
+ipv4 and ipv6 
+
+ipv4 
+132.11.22.133
+ipv4 adress can go only 0 to 255 in  all 4 blocks 
+is each one of this is 8 bits in size? 
+ip limites. 255^4
+
+DNS server? 
+
+
+
+
+mild hosting ? 
+intra net ? 
+ 
+
+ router ip address? 
+
+how can address be pvt in router.? 
+
+
+local network and routing 
+
+ifconfig
+npx serve --- network address
+
+and if wifi changed my ip will be changeD?
+
+
+
+how to do port scan of ips 
+so you can see others hidden project? 
+
+
+what is CDN 
+ 
+
+
+if i ams erving anything on port, everyone can view it 
+what is phising attack ? 
+
+open /etc/hosts
+change the ip attached to dns like facebook.com
+
+
+what is dns propagation ?
+
+
+
+what is vm? 
+
+
+hardware -- hypervisor ? 
+on them there is vm 
+explain this architecutre? 
+virtulization ? 
+
+
+what is aws lamda and firecracker in it?
+
+
+diff between vm and bare metal ? 
+bitcoin miners use bare metal why ? 
+
+bare metal is hardware without hypervisor
+
+diff between bare metal and home pr machines ?
+
+
+
+SSH ? its a protocol 
+
+secure shell helps us to connect to our machine
+why cryptographic network protocol ? 
+secure communication between 2 system 
+remote adminstration 
+commonly used to login to remote machine and execute commands
+
+
+key feature of SSH 
+encrytion 
+authentication 
+integrity
+
+
+
+its hard for sign up to cloud provider 
+
+
+aws azure gcp are primary cloud provider 
+but some cheaper alternative are
+civo 
+digit ocean 
+vultr
+
+
+ec2 -- elastic compute version 2 
+digit ocean me droplet
+
+
+
+how to make ec2 instance in aws and run a server on it explain from scratch and beg frindly
+ 
+
+key pairs ssh 
+ssh keys 
+
+
+public pvt key pairs 
+how to connect to aws using ssh pvt key 
+and why this ? 
+
+
+
+how to put my public key on my frend mac 
+so i can connect to it  
+.ssh/authorized_keys
+do it need same wifi connection? 
+
+
+ssh-keygen 
+
+
+wht if my frnd copy ssh pvt key? 
+
+id_rsa 
+
+
+
+
+stun protocol ?
+
+
+
+ignore micro ec2 machine for react and next
+you dont create application specific key pair 
+you create use specific 
+
+
+
+aws guidline 
+selected os and version, instance type 
+selected key pair created 
+security groups 
+port 22 is deafult ssh port , opened 3000 and 22
+added 16 gb storage 
+
+
+
+
+what is subnet ?
+what is forward proxy ? and how to use it in campus using VPN 
+
+
+what is apache ? 
+
+
+nginx ? 
+because there is ugly port google dont have port 
+
+https deafult mean is that port is 443
+which port is for http ? 
+
+ why nginx needed ? 
+ for wht nginx is used for ? 
+
+
+ reverse proxy 
+
+
+ proxy ?  
