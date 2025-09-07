@@ -1,0 +1,7 @@
+context 
+why you need solana ? 
+
+
+rents in solana ? 
+
+install solana CLI 
