@@ -1,0 +1,20 @@
+building a dapp 
+
+wallet adapter
+
+
+diff between wallet , dapp , wallet adapter? 
+
+
+dapp on eth  -- opensea 
+tensor 
+
+
+
+
+how to make extension in chrome ? 
+
+
+uniswap 
+?
+

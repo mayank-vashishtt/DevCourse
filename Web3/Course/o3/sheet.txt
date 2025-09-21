@@ -43,3 +43,14 @@ lamports. -- smallest unit in sol
 
 
 on eth you deploy your own contract 
+
+
+in solana usdtc is not smart contract in itself
+
+ERC - 20 
+
+
+what is mint account in solana ? 
+
+
+token program. is executable, not the mint account 

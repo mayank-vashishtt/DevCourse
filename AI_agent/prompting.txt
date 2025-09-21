@@ -1,0 +1,41 @@
+The bulk of the progress on “generative AI” has
+come since 2017, when eight researchers from
+Google wrote a paper called “Attention is All You
+Need”.
+
+
+It described an architecture for generating text
+where a “large language model” (LLM) was given a
+set of “tokens” (words and punctuation) and was
+focused on predicting the next “token”.
+
+
+OpenAI 
+Anthropic -- claude 
+google gemini deepmind 
+llama meta open source 
+Mistral (an open-source
+French company), DeepSeek (an open-
+source Chinese company).
+
+
+
+There are three basic techniques to prompting.
+
+Zero-shot: The “YOLO” approach. Ask
+the question and hope for the best.
+
+Single-shot: Ask a question, then provide
+one example (w/ input + output) to guide
+the model
+
+Few-shot: Give multiple examples for
+more precise control over the output.
+
+More examples = more guidance, but also takes
+more time.
+
+
+Claude is best at generating
+prompts for Claude, gpt-4o for gpt-4o, etc.
+

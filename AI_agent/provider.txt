@@ -1,0 +1,53 @@
+Hosted vs open-source
+
+what is hosted provider 
+
+if you think you will need to use open-
+source, prototype with cloud APIs, or you’ll be
+
+debugging infra issues instead of actually iterating
+on your code.
+
+
+what is model routing library? 
+
+
+
+Model size: accuracy vs cost/latency
+Large language models work by multiplying arrays
+and matrixes of numbers together. Each provider
+
+has larger models, which are more expensive, accu-
+rate, and slower, and smaller models, which are
+
+faster, cheaper, and less accurate.
+
+
+
+Context window size
+what is this and why ? 
+what is early prototyping 
+
+
+Right now, the longest context windows belong
+to the Google Gemini Flash set of models; Gemini
+Flash 1.5 Pro supports a 2 million token context
+window (roughly 4,000 pages of text).
+
+
+Reasoning models
+Another type of model is what’s called a “reasoning
+model”, namely, that it does a lot of logic internally
+before returning a response. It might take seconds,
+or minutes, to give a response, and it will return a
+response all at once (while streaming some
+“thinking steps” along the way).
+
+now-a-days how reasoning models are getting better? 
+techniques like chain-of-thought prompting
+“chain of draft” and 
+“chain of preference optimization”
+
+
+Suggested reading: “o1 isn’t a chat model” by
+Ben Hylak
