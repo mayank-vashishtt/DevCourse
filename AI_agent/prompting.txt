@@ -39,3 +39,34 @@ more time.
 Claude is best at generating
 prompts for Claude, gpt-4o for gpt-4o, etc.
 
+another approach is tell him to give response like steve jobs, elon musk 
+
+
+
+these above is good for helping you shape the tone but these technique  usually
+doesn’t improve accuracy.
+
+Weird formatting tricks
+
+CAPITALIZATION can add weight to
+certain words.
+
+XML-like structure can help models
+follow instructions more precisely.
+
+Claude & GPT-4 respond better to
+structured prompts (e.g., task,
+context, constraints).
+
+Experiment and tweak—small changes in struc-
+ture can make a huge difference! You can measure
+
+with evals (more on that later).
+
+
+
+
+
+If you think your prompts are detailed, go through
+and read some production prompts. They tend to be
+very detailed.

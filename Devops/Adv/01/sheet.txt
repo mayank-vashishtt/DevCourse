@@ -1,0 +1,37 @@
+certbot for https 
+nginx for reverse proxy 
+
+serverless backends? 
+
+what is aws lambda , and how its diff from vm ? 
+
+but its very expensive. 
+
+severless db is harder than severless BE 
+
+
+
+Easier defination
+What if you could just write your express routes and run a command. The app would automatically 
+Deploy
+Autoscale
+Charge you on a per request basis (rather than you paying for VMs)
+ 
+Problems with this approach
+More expensive at scale
+Cold start problem? wht is this 
+
+
+how do you solve a cold start problem ? 
+warm min server running 
+bot running somewhere 
+
+
+what is cloudflare. ?
+
+
+neonDB -- server less for db
+ 
+
+
+
