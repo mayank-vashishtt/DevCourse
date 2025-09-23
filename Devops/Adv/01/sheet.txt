@@ -23,15 +23,48 @@ Cold start problem? wht is this
 
 
 how do you solve a cold start problem ? 
-warm min server running 
-bot running somewhere 
+warm pool min server running 
+bot req  running somewhere 
 
 
 what is cloudflare. ?
 
 
 neonDB -- server less for db
- 
+
+
+
+
+famous server less BE
+aws lambda
+google cloud function
+cloudflare workers 
+
+
+
+When should you use a serverless architecture?
+When you have to get off the ground fast and don’t want to worry about deployments
+When you can’t anticipate the traffic and don’t want to worry about autoscaling
+If you have very low traffic and want to optimise for costs
+
+
+
+cloudflare -- captchas 
+
+cloudflare is shady 
+
+
+how serverless better than vm ? and why not ? 
+
+cloudfire dont use firecracker and lamda
+thats why it took then long to add python 
+
+cloudfare have there own interpreter thats why maybe 
+worker runtime uses v8 engine that chrome and node js uses 
+
+
+
+js runtime. -- bun (using zig) like node js (using c++)
 
 
 
