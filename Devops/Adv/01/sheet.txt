@@ -35,7 +35,7 @@ neonDB -- server less for db
 
 
 
-famous server less BE
+famous serverless BE
 aws lambda
 google cloud function
 cloudflare workers 
@@ -65,6 +65,50 @@ worker runtime uses v8 engine that chrome and node js uses
 
 
 js runtime. -- bun (using zig) like node js (using c++)
+
+
+
+how workers work ? 
+worker runtime is cloudfare
+
+
+what is isolates.  ?
+
+
+isolates vs container ? 
+docker is not as light weight as isolated explain this line ? 
+
+
+cloudflare expect to have single fetch function ?
+
+cloudfare worker doesnt have routing. 
+
+wrangler ? --- CLI of cloudflare 
+express doesnt work with cloduflare workers 
+ 
+hono in cloudflare  -- its framework like express, does express work there 
+
+
+explore the hono docs 
+
+
+serverless have one big problem with db connection 
+db can have limited amount of connection 
+
+connection pooling ? 
+how prisma make money ? -- by connection pooling 
+
+
+prisma accelerate --- connection pooling and caching 
+pool doesnt have limit 
+db have this is why its come in picture 
+
+
+serverless env is bad idea to have global variable 
+
+withAccelerate () wht it does? 
+
+
 
 
 

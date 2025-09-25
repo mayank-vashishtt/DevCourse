@@ -1,0 +1,94 @@
+kubernetes tutorial 
+
+
+Kubernetes (popularly known as k8s) is a container orchestration engine, 
+which as the name  suggests lets you create, delete, and update containers
+
+
+is it close to ecs ?  -- yes but how ? 
+
+
+This is useful when
+You have your docker images in the docker registry and want to deploy it in a cloud native fashion
+
+You want to not worry about patching, crashes. You want the system to auto heal
+
+You want to autoscale with some simple constructs
+
+You want to observe your complete system in a simple dashboard
+
+
+Kubernetes is also known as k8s. K_ _ _ _ _ _ _ _ s
+
+
+whts the architecture of k8s
+kubernetes clusters ? 
+
+diff between master node and worker node in aws ?
+ 
+developer talks to master node 
+whhat is the responsibiltiy to master node ? 
+take commands from developer and give job to worker like this something 
+
+
+
+Nodes 
+together nodes are called clusters 
+
+In kubernetes, you can create and connect various machines together, all of which are running kubernetes. Every machine here is known as a node
+
+Master Node (Control pane) - The node that takes care of deploying the containers/healing them/listening to the developer to understand what to deploy
+
+Worker Nodes - The nodes that actually run your Backend/frontend
+
+there are 5 major process running on master node: 
+API Server:  to check whts all are running now and scheduling a new one 
+etcd: this is db, whenever start container it stored here, status changes here 
+kube-scehduler: scheduling and deciding where the pod goes 
+kube-controller-manager: 
+kube-cloud-controller-manager:
+
+
+worker nodes: 
+kubelet --- talking to master node api server, wht all jobs i need to run or stop or start. scheduling a job on pod 
+kube proxy  -- responsible for talk to internet/networking
+container runtime -- container actually runs. here 
+
+
+
+
+
+Cluster
+A bunch of worker nodes + master nodes make up your kubernetes cluster . 
+You can always add more / remove nodes from a cluster.
+
+
+
+
+Common Container Runtimes for Kubernetes
+containerd
+CRI-O
+Docker
+
+
+single pod can run mutliple container
+pod can make both to communicate by localhost 
+
+
+
+kind 
+
+kubectl 
+
+
+what is pod limit ? 
+
+how do we decide we need more pods or more nodes 
+whts diff between pods and nodes
+
+
+wht /health does ? 
+
+
+
+manifest.yml 
