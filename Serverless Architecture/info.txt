@@ -142,3 +142,165 @@ mtlb ki saare engine database se pehle uss medium pr connect honge then woh medi
 prisma mai dikkat aati hai bahut so woh sab bhi dekheneg + prisma accelerate kyu use krte hai sab kuch dekhenge aur maine woh bloging site ka bhi project liya hai as an example of all these concepts
 
 
+my app wale folder mai cloudflare worker install kiya hai usme saari cheeje hai humne ek site ko bina deploy kiye run kiya hai cloudflare engine pr
+usme kaafi saari cheeje notice krne wali hai 
+ki usme express installed hi nhi hai 
+without express ke chl rha hai 
+ab hume yeh dekhna hai ki usme routing kaise krenge 
+
+
+
+Initializing a worker
+To create and deploy your application, you can take the following steps - 
+npm create cloudflare -- my-app
+Select no for Do you want to deploy your application
+Explore package.json dependencies
+"wrangler": "" //wrangler ka latest version
+Notice express is not a dependency there
+npm run dev 
+
+
+
+
+we will also get into hono a language that cloudflare used in place of express 
+its kind of easy but we will get inside it
+inorder to  create a new hono applicate we need the command npm create hono@latest
+after that hono will be installed 
+we need to know about the history of hono ? why is it req to use hono while using cloudflare whats the relattion btwn them ?????
+
+
+Question - Where is the express code? HTTP Server?
+Cloudflare expects you to just write the logic to handle a request. 
+Creating an HTTP server on top is handled by cloudflare
+
+How can I do routing ? 
+
+n express, routing is done as follows - 
+import express from "express"
+const app = express();
+
+app.get("/route", (req, res) => {
+	// handles a get request to /route
+});
+
+How can you do the same in the Cloudflare environment?
+export default {
+	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+		console.log(request.body);
+		console.log(request.headers);
+		
+		if (request.method === "GET") {
+			return Response.json({
+				message: "you sent a get request"
+			});
+		} else {
+			return Response.json({
+				message: "you did not send a get request"
+			});
+		}
+	},
+}; yeh kaafi basic sa hi next ke project  mai use kiya tha
+
+Cloudflare does not expect a routing library/http server out of the box. You can write a full application with just the constructs available above.
+ 
+We will eventually see how you can use other HTTP frameworks (like express) in cloudflare workers.
+
+
+If you’re using Cloudflare Pages (Free plan)
+
+You can assign a custom domain for free.
+You do not need to buy a paid Cloudflare plan.
+However, there are two conditions:
+You must own the domain (from any registrar — GoDaddy, Namecheap, Google Domains, etc.).
+You must point that domain’s nameservers to Cloudflare (so Cloudflare can manage DNS).
+That’s it.
+
+✅ You can:
+
+Use your own domain (myapp.com)
+Add it to your Cloudflare account
+Point it to your Pages site (e.g., myapp.pages.dev)
+💡 You don’t have to buy the domain from Cloudflare — transferring it is optional.
+
+
+🔹 If you’re using Cloudflare Workers + Pages (Pro or higher)
+Only in this case (for custom Workers routes like api.myapp.com or KV namespaces tied to a domain) might you need a paid plan if:
+You’re exceeding free limits,
+Or you want Custom Domains on Workers (not Pages).
+But if your goal is to host a Next.js frontend (e.g., via Pages) with a custom domain, it’s 100% free.
+
+
+🔹 If you’re using Vercel
+Different story — you can also add custom domains for free, but SSL and edge functions are limited on the Hobby plan.
+
+
+
+Adding express to it
+Why can’t we use express? Why does it cloudflare doesn’t start off with a simple express boiler 
+
+Cloudflare’s platform (Workers, Pages Functions, etc.) doesn’t run on Node.js.
+It runs on a V8 isolate runtime — the same JavaScript engine that powers Chrome and Deno.
+
+
+xpress is built around Node.js core APIs like:
+import http from 'http'
+import fs from 'fs'
+
+Cloudflare’s runtime doesn’t expose those.
+So express() literally can’t run — it has nowhere to attach an HTTP listener.
+
+
+💡 Why Cloudflare Chose Not to Start with Express
+
+Cloudflare intentionally avoided the Node.js model because:
+
+Performance: Each request spins up a micro-isolate (~1–2 ms cold start).
+Express/Node servers are heavy and persistent.Security: No local file system or open TCP ports → fewer attack surfaces.
+Scalability: Cloudflare runs code globally at edge nodes — stateless, fast.
+Cost: Running full Node per request across 300+ PoPs would be insanely expensive.
+In short — Express = “a server inside your app.”
+Cloudflare = “your code runs inside their global server.”
+
+
+🧩 The Alternative: Express-like Frameworks for Cloudflare
+
+Since devs love Express, some projects re-create that style for Workers:
+
+	
+Hono -Tiny, super-fast, Express-like API (app.get('/route', ...))
+itty-router	Minimal router, very lightweight
+Worktop	-Older but good structured Worker routing
+Wrangler + Hono	Recommended combo for modern Workers
+
+
+Using hono
+What is Hono
+
+Hono is a lightweight, ultra-fast web framework — like Express or Fastify — but built specifically for modern runtimes such as:
+
+Cloudflare Workers
+Deno
+Bun
+Vercel Edge Functions
+AWS Lambda (via adapters)
+Think of it as “Express, but for the Edge.”
+
+Why It Exists
+
+Express was designed for Node.js, and it’s great — but Node isn’t ideal for edge or serverless environments (too heavy, slower cold starts, etc).
+Frameworks like Hono fix that by being:
+Tiny: ~2KB bundle size
+Super fast: benchmarks show it’s often faster than Express and even Fastify
+Web-standard based: uses the Request and Response objects from the Fetch API — no weird Node-specific stuff
+
+
+
+Working with cloudflare workers - 
+1.Initialize a new app
+npm create hono@latest my-app
+Move to my-app and install the dependencies.
+
+Deploying 
+Make sure you’re logged into cloudflare (wrangler login)
+
+connection pooloing tldr mai hai uska solution hai prisma accelerate
