@@ -49,7 +49,7 @@ Users: Individual identities.
 Groups: Collection of users.
 Roles: Temporary permissions (used by services).
 Policies: JSON documents that define permissions.
-
+ 
 ⚠️ Golden Rule:
 Always follow the Principle of Least Privilege — give only the permissions a user/service needs, nothing more.
 
