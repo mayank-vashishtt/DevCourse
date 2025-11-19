@@ -1,0 +1,54 @@
+what is hook 
+what is used before hook 
+what is use of use state 
+
+what is useState
+what will happen if we console usestate
+use state is array where 1st is value 2nd is function 
+array destruturing in use state 
+const[counter,setCounter] = useState(0);
+use state counter 
+use state with input 
+both this in sinlge state variable too 
+
+useEffect hook ? 
+side effects in our components 
+side effect -- actions which are performed by outside world 
+some common side effect with there explanation: ? 
+argument in useEffect -- callback<what to run>, dependencies<when to run>
+without dependecies
+empty array 
+with dependecies 
+cleanup function ?  -- have to write return function 
+
+useContext ? -- global data ? 
+what is this 
+how to use this ? 
+create a context 
+need to decide which component to access it 
+provide and use it 
+strucutre for it ? 
+
+useRef? 
+allows us to access DOM element ? 
+mutable re-render element that will NOT re-render the component 
+when to use it ? 
+why its diff from use state and use effect ? 
+
+useReducer?
+
+useLayoutEffect? 
+same as Useeffect but runn differently 
+asynchoronous
+
+useMemo Hook ?
+memoziation --- 
+why this. ? 
+diff between useeffect and usememo ? 
+improve performance. 
+
+useCallback ? 
+diff btween use memo and usecallback?
+
+
+custom hook ? 
