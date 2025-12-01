@@ -1,0 +1,68 @@
+Model Context Protocol 
+
+The translator is like an MCP!
+
+Model context protocol (MCP) is a standardized interface and framework that
+allows AI models to seamlessly interact with external tools, resources, and
+environments.
+
+
+The problem
+infamous M×N integration problem.
+Essentially, if you have M different AI applications and N different tools/data
+sources, you could end up needing M × N custom integrations.
+
+MCP tackles this by introducing a standard interface in the middle. Instead of M
+× N direct integrations, we get M + N implementations: each of the M AI
+
+The Host is the user-facing AI application, the environment where the AI model
+lives and interacts with the user.(OpenAI’s ChatGPT interface or Anthropic’s
+Claude desktop app),
+
+Host is the one that initiates connections to the available MCP servers when the
+system needs them. It captures the user's input, keeps the conversation history,
+and displays the model’s replies.
+
+The MCP Client is a component within the Host that handles the low-level
+communication with an MCP Server.
+
+Think of the Client as the adapter or messenger. While the Host decides what to
+do, the Client knows how to speak MCP to actually carry out those instructions
+with the server.
+
+The MCP Server is the external program or service that actually provides the
+capabilities (tools, data, etc.) to the application.
+
+Servers can run locally on the same machine as the Host or remotely on some
+cloud service since MCP is designed to support both scenarios seamlessly.
+
+
+
+Tools, prompts and resources form the three core capabilities of the MCP
+framework.
+
+Tools are what they sound like: functions that do something on behalf of the AI
+model. These are typically operations that can have effects or require
+computation beyond the AI’s own capabilities.
+
+
+Resources provide read-only data to the AI model.
+These are like databases or knowledge bases that the AI can query to get
+information, but not modify.
+Unlike tools, resources typically do not involve heavy computation or side effects,
+since they are often just information lookup.
+
+Prompts in the MCP context are a special concept: they are predefined prompt
+templates or conversation flows that can be injected to guide the AI’s behavior.
+
+
+
+
+
+timeLine: 
+
+llm 
+llm + context 
+MCP 
+
+usbc ? 
