@@ -1,0 +1,31 @@
+what is atom ?
+
+why to use it instead of useState hook ? 
+
+RecoilRoot 
+atom.js 
+useRecoilValue 
+useRecoilState
+useSetRecoilState
+
+Selectors ? 
+how better than normal use ? 
+Async Data Queries ??
+in atom selector will have async function ? explain. 
+ 
+
+
+ atomFamily ? 
+
+ selectorFamily ? 
+  
+
+https://github.com/100xdevs-cohort-2/7.4
+
+
+useRecoilStateLoadable ?
+useRecoilValueLoadable ?
+
+
+how to add skeletion instead of loading?
+
