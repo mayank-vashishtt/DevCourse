@@ -1,0 +1,13 @@
+backend -- folder 
+there is a file structure that we follow as backend devs
+
+backend/ 
+inside it there will be 
+
+models folder 
+controllers folder 
+routes folder
+config folder 
+.env 
+server.js 
+.gitignore 
