@@ -243,164 +243,168 @@ handle async
 
 
 
-filter/map/reduce
+// filter/map/reduce
 
 
 
-filter()
-Used to keep only the elements that match a condition
-➡️ Returns a new array (same size or smaller)
+// filter()
+// Used to keep only the elements that match a condition
+// ➡️ Returns a new array (same size or smaller)
 
 
 
-const nums = [1, 2, 3, 4, 5, 6];
-const greaterThan3 = nums.filter(n => n>3)
-console.log(greaterThan3)
+// const nums = [1, 2, 3, 4, 5, 6];
+// const greaterThan3 = nums.filter(n => n>3)
+// console.log(greaterThan3)
 
-*/
+// */
 
-// Map()
-// Used to transform each element
-// Returns a new array (same size)
+// // Map()
+// // Used to transform each element
+// // Returns a new array (same size)
 
-// const nums = [1, 2, 3, 4];
-// const plus2 = nums.map(n => n + 2 )
-// console.log(plus2)
+// // const nums = [1, 2, 3, 4];
+// // const plus2 = nums.map(n => n + 2 )
+// // console.log(plus2)
 
-// reduce()
-// ➡️ Used to accumulate all values into one result
-// ➡️ Returns a single value (number, object, array, anything)
-
-
-// const nums = [1, 2, 3, 4];
-
-// const sum = nums.reduce((acc, curr) => acc + curr, 0);
-//acc -- treat as sum jesme har array ki value store hori h , curr is like that iteration , 0 is intial value of acc
-// console.log(sum); 
-
-// Explanation:
-// acc → accumulator (stores result)
-// curr → current element
-// 0 → initial value of accumulator
+// // reduce()
+// // ➡️ Used to accumulate all values into one result
+// // ➡️ Returns a single value (number, object, array, anything)
 
 
-// const product = nums.reduce((mul,n) => mul*n,1)
-// console.log(product)
+// // const nums = [1, 2, 3, 4];
+
+// // const sum = nums.reduce((acc, curr) => acc + curr, 0);
+// //acc -- treat as sum jesme har array ki value store hori h , curr is like that iteration , 0 is intial value of acc
+// // console.log(sum); 
+
+// // Explanation:
+// // acc → accumulator (stores result)
+// // curr → current element
+// // 0 → initial value of accumulator
 
 
-//UTF-8 is a variable-length Unicode encoding that represents every character (all languages, emojis) using 1–4 bytes. It’s the most common encoding used on the web.
-//UTF-8 = Unicode Transformation Format – 8 bit
+// // const product = nums.reduce((mul,n) => mul*n,1)
+// // console.log(product)
 
 
-
-// Pyramid of Doom // Callback hell 
-
-//Callback Hell is deeply nested, unreadable callback code caused by handling multiple dependent asynchronous operations.
-
-//pyramid, messy, hard to read, and difficult to maintain.
-//too many nested callbacks,
-
-//why we need it 
-//there are mutilple steps in our code and every step is depend on another step 
-
-// for example 
-// -- social meadia platform 
-// get user -- get user's post --- save post -- send response
-
-//how to fix callbacks 
-//use named functions instead of making inline function 
-//convert callbacks into promieses 
-// use async/await 
-
-//callback hell. {} ()
-function getUser(id, callback) {
-    setTimeout(() => {
-        console.log("Fetched user");
-        callback({ id, name: "Mayank" });
-    }, 1000);
-}
-
-function getOrders(user, callback) {
-    setTimeout(() => {
-        console.log("Fetched orders");
-        callback(["order1", "order2"]);
-    }, 1000);
-}
-
-function getOrderDetails(order, callback) {
-    setTimeout(() => {
-        console.log("Fetched order details");
-        callback("Order details for " + order);
-    }, 1000);
-}
-
-
-// ---- Callback Hell ----
-getUser(1, function (user) {
-    getOrders(user, function (orders) {
-        getOrderDetails(orders[0], function (details) {
-            console.log(details);
-        });
-    });
-});
+// //UTF-8 is a variable-length Unicode encoding that represents every character (all languages, emojis) using 1–4 bytes. It’s the most common encoding used on the web.
+// //UTF-8 = Unicode Transformation Format – 8 bit
 
 
 
-//Fixed Version Using Promises
+// // Pyramid of Doom // Callback hell 
 
-function getUser(id) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log("Fetched user");
-            resolve({ id, name: "Mayank" });
-        }, 1000);
-    });
-}
+// //Callback Hell is deeply nested, unreadable callback code caused by handling multiple dependent asynchronous operations.
 
-function getOrders(user) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log("Fetched orders");
-            resolve(["order1", "order2"]);
-        }, 1000);
-    });
-}
+// //pyramid, messy, hard to read, and difficult to maintain.
+// //too many nested callbacks,
 
-function getOrderDetails(order) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            console.log("Fetched order details");
-            resolve("Order details for " + order);
-        }, 1000);
-    });
-}
+// //why we need it 
+// //there are mutilple steps in our code and every step is depend on another step 
 
-// ---- Promise Chain ----
-getUser(1)
-    .then(getOrders)
-    .then(orders => getOrderDetails(orders[0]))
-    .then(console.log);
+// // for example 
+// // -- social meadia platform 
+// // get user -- get user's post --- save post -- send response
 
+// //how to fix callbacks 
+// //use named functions instead of making inline function 
+// //convert callbacks into promieses 
+// // use async/await 
 
-// ---- async/await  ----
-async function run() {
-    const user = await getUser(1);
-    const orders = await getOrders(user);
-    const details = await getOrderDetails(orders[0]);
-    console.log(details);
-}
+// //callback hell. {} ()
+// function getUser(id, callback) {
+//     setTimeout(() => {
+//         console.log("Fetched user");
+//         callback({ id, name: "Mayank" });
+//     }, 1000);
+// }
 
-run();
+// function getOrders(user, callback) {
+//     setTimeout(() => {
+//         console.log("Fetched orders");
+//         callback(["order1", "order2"]);
+//     }, 1000);
+// }
+
+// function getOrderDetails(order, callback) {
+//     setTimeout(() => {
+//         console.log("Fetched order details");
+//         callback("Order details for " + order);
+//     }, 1000);
+// }
 
 
-// Summary
-// ❌ Callback Hell
-// Nested callbacks
-// Hard to read & maintain
+// // ---- Callback Hell ----
+// getUser(1, function (user) {
+//     getOrders(user, function (orders) {
+//         getOrderDetails(orders[0], function (details) {
+//             console.log(details);
+//         });
+//     });
+// });
 
-// ✔ Promises
-// Flat .then() chain
 
-// ✔ async/await
-// Cleanest, synchronous-like code
-// Easier error handling
+
+// //Fixed Version Using Promises
+
+// function getUser(id) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log("Fetched user");
+//             resolve({ id, name: "Mayank" });
+//         }, 1000);
+//     });
+// }
+
+// function getOrders(user) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log("Fetched orders");
+//             resolve(["order1", "order2"]);
+//         }, 1000);
+//     });
+// }
+
+// function getOrderDetails(order) {
+//     return new Promise(resolve => {
+//         setTimeout(() => {
+//             console.log("Fetched order details");
+//             resolve("Order details for " + order);
+//         }, 1000);
+//     });
+// }
+
+// // ---- Promise Chain ----
+// getUser(1)
+//     .then(getOrders)
+//     .then(orders => getOrderDetails(orders[0]))
+//     .then(console.log);
+
+
+// // ---- async/await  ----
+// async function run() {
+//     const user = await getUser(1);
+//     const orders = await getOrders(user);
+//     const details = await getOrderDetails(orders[0]);
+//     console.log(details);
+// }
+
+// run();
+
+
+// // Summary
+// // ❌ Callback Hell
+// // Nested callbacks
+// // Hard to read & maintain
+
+// // ✔ Promises
+// // Flat .then() chain
+
+// // ✔ async/await
+// // Cleanest, synchronous-like code
+// // Easier error handling
+
+
+
+

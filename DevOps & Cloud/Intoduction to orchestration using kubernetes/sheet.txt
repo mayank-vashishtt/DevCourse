@@ -1,0 +1,28 @@
+what kubernetes do for us ? 
+what kubernetes can do
+
+orchestrating containers 
+automatic bin packing
+
+fail over 
+scale -- how automatic ?
+load balancing ? 
+
+
+what is pod? 
+what kubernetes architecture ?
+
+
+kubernates architecure have 2 type of machine 
+control plane -- controller , scheduler , etcd , api server
+data plane -- kubelet , kube proxy , CRI container runtime<docker container>
+
+
+api server? 
+it will authenticate and authorize the request
+then you validate 
+talk to ETCD 
+
+
+
+ck certified ?
